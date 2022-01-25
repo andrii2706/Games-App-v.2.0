@@ -3,14 +3,13 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {WrapComponent} from './components/wrap/wrap.component';
-import {GamesComponent} from './components/games/games.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from "@angular/router";
 import {MatIconModule} from "@angular/material/icon";
 import {HomeComponent} from './components/home/home.component';
-import { GameComponent } from './components/games/game/game.component';
-import { GameDetailsComponent } from './components/games/game-details/game-details.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LinkedinIconComponent } from './components/icons/linkedin-icon/linkedin-icon.component';
+import { GitIconComponent } from './components/icons/git-icon/git-icon.component';
 
 const routes: Routes = [
   {
@@ -31,6 +30,8 @@ const routes: Routes = [
     WrapComponent,
     HomeComponent,
     FooterComponent,
+    LinkedinIconComponent,
+    GitIconComponent,
   ],
   imports: [
     BrowserModule,
