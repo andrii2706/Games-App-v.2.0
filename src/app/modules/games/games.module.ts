@@ -1,21 +1,29 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
 import {GamesComponent} from "../../components/games/games.component";
 import {GameComponent} from "../../components/games/game/game.component";
 import {GameDetailsComponent} from "../../components/games/game-details/game-details.component";
 import {GamesroutesModule} from "./gamesroutes/gamesroutes.module";
-
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
   declarations: [
     GamesComponent,
     GameComponent,
-    GameDetailsComponent
+    GameDetailsComponent,
+
   ],
   imports: [
-    GamesroutesModule
+    GamesroutesModule,
+    HttpClientModule,
+    CommonModule,
+    NgxPaginationModule
   ],
-  exports:[]
+
+  exports: [],
+
 })
-export class GamesModule { }
+export class GamesModule {
+}

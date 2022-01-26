@@ -1,0 +1,20 @@
+.game-card{
+
+  width: 410px;
+  height: auto;
+  background: rgb(125, 123, 123, 0.80);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  img{
+    width: 350px;
+    height: 200px;
+  }
+  h1{
+    color: white;
+  }
+}

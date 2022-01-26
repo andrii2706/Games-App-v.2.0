@@ -1,0 +1,12 @@
+.games{
+  background: rgb(13, 13, 22, 0.63);
+  h1{
+   color: white;
+  }
+  .games-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
