@@ -1,12 +1,41 @@
-.games{
-  background: rgb(13, 13, 22, 0.63);
-  h1{
-   color: white;
+.all-games{
+  .games {
+    height: auto;
+    background-image: url("https://images.unsplash.com/photo-1627855437292-7efeee237b12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdhbWVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80") !important;
+
+    .games-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pagination-controllers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-  .games-list{
+}
+.games-header {
+  h1 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
+
+    margin: 20px;
+    color: white;
+    padding-bottom:5px ;
+    border-bottom: 1px solid #1D1D1E;
   }
 }
 
+.loader {
+  color: #1D1D1E;
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1627855437292-7efeee237b12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdhbWVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80") !important;
+  justify-content: center;
+  align-items: center;
+}

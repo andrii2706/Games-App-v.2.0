@@ -1,9 +1,19 @@
-<div  id="Games" class="games">
-  <h1>Games</h1>
-  <div *ngIf="items" class="games-list">
-    <app-game *ngFor="let game of games | paginate :{ itemsPerPage: 25, currentPage: page, totalItems:items.count}" [game]="game"></app-game>
+<div id="all-games" class="all-games">
+  <div class="loader" *ngIf="!games" >
+    <mat-spinner></mat-spinner>
   </div>
-  <div>
-    <pagination-controls class="my-pagination" (pageChange)="navigateTo($event)"></pagination-controls>
+  <div class="games-header">
+    <div *ngIf="items" >
+      <h1 [innerText]="items.seo_title"></h1>
+    </div>
+  </div>
+  <div id="Games" class="games" *ngIf="games">
+    <div *ngIf="items" class="games-list">
+      <app-game *ngFor="let game of games | paginate :{ itemsPerPage: 25, currentPage: page, totalItems:items.count}"
+                [game]="game"></app-game>
+    </div>
+    <div class="pagination-controllers">
+      <pagination-controls class="pagination" (pageChange)="navigateTo($event)"></pagination-controls>
+    </div>
   </div>
 </div>

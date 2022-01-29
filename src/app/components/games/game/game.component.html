@@ -1,5 +1,6 @@
-<div id="game-card" class="game-card">
-  <h1>{{game.name}}</h1>
+<div id="game-card" class="game-card" (click)="showGameDetails()">
   <img src="{{game.background_image}}" alt="Game Image">
+  <h1>{{game.name}}</h1>
+  <ngb-rating class="stars" [rate]="game.rating"></ngb-rating>
 </div>
 

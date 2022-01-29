@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LinkedinIconComponent } from './components/icons/linkedin-icon/linkedin-icon.component';
 import { GitIconComponent } from './components/icons/git-icon/git-icon.component';
 import {HttpClientModule} from "@angular/common/http";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -40,6 +41,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatIconModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
