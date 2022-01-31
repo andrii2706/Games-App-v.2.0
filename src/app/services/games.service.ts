@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IGames} from "../interfaces/Igames";
+import {IGames, IGamesDetails} from "../interfaces/Igames";
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,15 @@ export class GamesService {
           key: this.key,
           page:NewPage,
           ...filter
+        }
+      })
+    })
+  }
+  getGameById(id :number): Observable<IGamesDetails>{
+    return this.httpClient.get<IGamesDetails>(`${this.url}/${id}`,{
+      params: new HttpParams({
+        fromObject:{
+          key: this.key,
         }
       })
     })

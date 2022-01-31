@@ -1,6 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {IGame} from "../../../interfaces/Igames";
-import {NgbRatingConfig} from "@ng-bootstrap/ng-bootstrap";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IGame, IGamesDetails} from "../../../interfaces/Igames";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -13,19 +12,19 @@ export class GameComponent implements OnInit {
   game: IGame
 
   constructor(
-    config: NgbRatingConfig,
     private router: Router,
     private activatedRouter: ActivatedRoute
-  ) {
-    config.max = 5;
-    config.readonly = true;
-  }
+  ) {}
+
+  @Output()
+  data: EventEmitter<IGame> = new EventEmitter<IGame>()
 
   ngOnInit(): void {
   }
 
   showGameDetails() {
-    // this.router.navigate([this.game.id],{relativeTo:this.activatedRouter})
-    // console.log('Hello Details');
+    this.data.emit(this.game)
+    this.router.navigate([this.game.id], {relativeTo: this.activatedRouter})
+
   }
 }

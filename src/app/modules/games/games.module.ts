@@ -8,21 +8,31 @@ import {CommonModule} from "@angular/common";
 import {NgxPaginationModule} from "ngx-pagination";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatCardModule} from "@angular/material/card";
+import {AppModule} from "../../app.module";
+import {XboxComponent} from "../../components/icons/xbox/xbox.component";
+import {PlayStationComponent} from "../../components/icons/play-station/play-station.component";
+import {WindowsComponent} from "../../components/icons/windows/windows.component";
+import {MatIconModule} from "@angular/material/icon";
 @NgModule({
   declarations: [
     GamesComponent,
     GameComponent,
     GameDetailsComponent,
-
+    XboxComponent,
+    PlayStationComponent,
+    WindowsComponent
   ],
-    imports: [
-        GamesroutesModule,
-        HttpClientModule,
-        CommonModule,
-        NgxPaginationModule,
-        MatProgressSpinnerModule,
-      NgbModule
-    ],
+  imports: [
+    GamesroutesModule,
+    HttpClientModule,
+    CommonModule,
+    NgxPaginationModule,
+    MatProgressSpinnerModule,
+    NgbModule,
+    MatCardModule,
+    MatIconModule,
+  ],
 
   exports: [],
 

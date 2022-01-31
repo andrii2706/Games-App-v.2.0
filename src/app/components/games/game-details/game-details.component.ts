@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {IGamesDetails} from "../../../interfaces/Igames";
+import {ActivatedRoute} from "@angular/router";
+import {GamesService} from "../../../services/games.service";
 
 @Component({
   selector: 'app-game-details',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameDetailsComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('description')
+  gameDescription: ElementRef
+  @Input()
+  gameDetails: IGamesDetails
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private gamesService:GamesService
+  ) {
+    this.activatedRoute.params.subscribe(({id})=>{
+      this.gamesService.getGameById(id).subscribe(value => this.gameDetails = value)
+    })
+  }
 
   ngOnInit(): void {
+
   }
+
 
 }

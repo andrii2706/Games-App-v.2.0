@@ -7,9 +7,10 @@ const routes: Routes=[
   {
     path: '',
     component: GamesComponent,
-    children :[{
-      path: 'id', component:GameDetailsComponent
-    }]
+  },
+  {
+    path: ':id',
+    component:GameDetailsComponent
   }
 ]
 
