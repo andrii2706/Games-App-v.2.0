@@ -1,8 +1,24 @@
-<div id="games-details">
-  <span><a href="#"><app-windows></app-windows></a></span>
-  <span><a href="#"><app-xbox></app-xbox></a></span>
-  <span><a href="#"><app-play-station></app-play-station></a></span>
-  <div></div>
-  <div></div>
-  <div></div>
+<div id="games-details" class="game-details" *ngIf="gameDetails">
+  <div class="game-header">
+    <div class="game-image">
+      <img src="{{gameDetails.background_image}}" alt="Image Poster" width="450px">
+    </div>
+    <div class="metacritic-position" [innerText]="gameDetails.metacritic"></div>
+    <div class="game-name">
+      <h1>{{gameDetails.name_original}}</h1>
+      <div>
+        <span>
+          <a href="#"><app-play-station></app-play-station></a>
+        </span>
+        <span>
+          <a href="#"><app-xbox></app-xbox></a>
+        </span>
+        <span>
+          <a href="#"><app-windows></app-windows></a>
+        </span>
+      </div>
+    </div>
+    <div class="game-description">
+    </div>
+  </div>
 </div>
