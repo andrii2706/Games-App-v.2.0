@@ -13,6 +13,7 @@ import {XboxComponent} from "../../components/icons/xbox/xbox.component";
 import {PlayStationComponent} from "../../components/icons/play-station/play-station.component";
 import {WindowsComponent} from "../../components/icons/windows/windows.component";
 import {MatIconModule} from "@angular/material/icon";
+import {MatTabsModule} from "@angular/material/tabs";
 @NgModule({
   declarations: [
     GamesComponent,
@@ -22,16 +23,17 @@ import {MatIconModule} from "@angular/material/icon";
     PlayStationComponent,
     WindowsComponent
   ],
-    imports: [
-        GamesroutesModule,
-        HttpClientModule,
-        CommonModule,
-        NgxPaginationModule,
-        MatProgressSpinnerModule,
-        NgbModule,
-        MatCardModule,
-        MatIconModule,
-    ],
+  imports: [
+    GamesroutesModule,
+    HttpClientModule,
+    CommonModule,
+    NgxPaginationModule,
+    MatProgressSpinnerModule,
+    NgbModule,
+    MatCardModule,
+    MatIconModule,
+    MatTabsModule,
+  ],
 
   exports: [],
 

@@ -3,6 +3,10 @@
   margin: 25px;
   padding: 15px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   .metacritic-position {
     font-size: 25px;
@@ -15,7 +19,7 @@
     z-index: 1;
     position: absolute;
     top: 410px;
-    margin-left: 135px;
+    margin-left: 345px;
 
   }
 
@@ -49,5 +53,31 @@
       width: 600px;
       border-radius: 10px;
     }
+  }
+}
+
+.games-description {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  max-width: 800px;
+  padding: 25px;
+  .screenshots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  img{
+    width: 450px;
+    margin: 25px;
+  }
+  }
+  .tabs{
+    .tab-header{
+      color: beige;
+      font-size: 20px;
+      font-weight: 100;
+    }
+
   }
 }

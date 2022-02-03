@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IGames, IGamesDetails} from "../interfaces/Igames";
+import {IGames, IGamesDetails, IScreenShots} from "../interfaces/Igames";
 
 @Injectable({
   providedIn: 'root'
 })
 export class GamesService {
   url = 'https://api.rawg.io/api/games'
+  screenShot = '/screenshots'
   key = '75680a18d0894f90a57b6e2070349042'
   basicUrl = 'https://api.rawg.io/api/games?key=75680a18d0894f90a57b6e2070349042'
   constructor(
@@ -32,6 +33,15 @@ export class GamesService {
       params: new HttpParams({
         fromObject:{
           key: this.key,
+        }
+      })
+    })
+  }
+  getGameScreenShots(id: number): Observable<IScreenShots>{
+    return this.httpClient.get<IScreenShots>(`${this.url}/${id}${this.screenShot}`,{
+      params: new HttpParams({
+        fromObject:{
+          key: this.key
         }
       })
     })

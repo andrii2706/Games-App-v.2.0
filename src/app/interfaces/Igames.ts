@@ -85,3 +85,20 @@ export interface IGamesDetails {
     "21": number
   },
 }
+export interface IScreenShots {
+  "count": number,
+  "next": null,
+  "previous": null,
+  results:[
+    {
+      "id":number,
+      "image": string,
+      "is_deleted":boolean
+    }
+  ]
+}
+export interface IScreenShot {
+  "id":number,
+  "image": string,
+  "is_deleted":boolean
+}
