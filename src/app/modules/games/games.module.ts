@@ -21,7 +21,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     GameDetailsComponent,
     XboxComponent,
     PlayStationComponent,
-    WindowsComponent
+    WindowsComponent,
   ],
   imports: [
     GamesroutesModule,

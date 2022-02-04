@@ -27,20 +27,46 @@
       <div [innerHTML]="gameDetails.description" *ngIf="gameDetails"></div>
       <div>
         <mat-tab-group class="tabs">
-          <mat-tab >
+          <mat-tab>
             <ng-template mat-tab-label><span class="tab-header">ScreenShots</span></ng-template>
             <div class="screenshots" *ngFor="let screenshot of screenShots">
-      <span *ngIf="!screenshot.is_deleted">
+                 <span *ngIf="!screenshot.is_deleted">
               <img src="{{screenshot.image}}" alt="Game screenshot">
-      </span>
+                 </span>
             </div>
           </mat-tab>
-          <mat-tab >
-            <ng-template mat-tab-label><span class="tab-header">ScreenShots</span></ng-template>
-            <div class="screenshots" *ngFor="let screenshot of screenShots">
-      <span *ngIf="!screenshot.is_deleted">
-              <img src="{{screenshot.image}}" alt="Game screenshot">
-      </span>
+          <mat-tab>
+            <ng-template mat-tab-label><span class="tab-header">Game Trailers</span></ng-template>
+            <div class="videos" >
+                 <span *ngFor="let video  of videos">
+                   <h2>{{video.name}}</h2>
+                   <img src="{{video.preview}}" alt="{{video.name}}">
+<!--                   <iframe-->
+<!--                     width="480px"-->
+<!--                     height="480px"-->
+<!--                     [src]="video.date"-->
+<!--                     frameborder="0"-->
+<!--                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                     allowfullscreen-->
+<!--                   ></iframe>-->
+                </span>
+            </div>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label><span class="tab-header">Achievements</span></ng-template>
+            <div class="videos" >
+                 <span *ngFor="let video  of videos">
+                   <h2>{{video.name}}</h2>
+                   <img src="{{video.preview}}" alt="{{video.name}}">
+                   <!--                   <iframe-->
+                   <!--                     width="480px"-->
+                   <!--                     height="480px"-->
+                   <!--                     [src]="video.date"-->
+                   <!--                     frameborder="0"-->
+                   <!--                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+                   <!--                     allowfullscreen-->
+                   <!--                   ></iframe>-->
+                </span>
             </div>
           </mat-tab>
         </mat-tab-group>

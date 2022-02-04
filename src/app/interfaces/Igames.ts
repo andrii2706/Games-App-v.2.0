@@ -102,3 +102,25 @@ export interface IScreenShot {
   "image": string,
   "is_deleted":boolean
 }
+export interface IGameTrailers {
+  count: number,
+  next: null,
+  previous: null,
+  results: [
+    {
+      id:number,
+      name: string,
+      preview: string,
+      date: {
+        480: string,
+        max:string,
+      }
+    }
+  ]
+}
+export interface IGameTrailer {
+  id:number,
+  name: string,
+  preview: string,
+  date: object
+}

@@ -62,22 +62,38 @@
   letter-spacing: 1px;
   max-width: 800px;
   padding: 25px;
-  .screenshots{
+
+  .screenshots {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  img{
-    width: 450px;
-    margin: 25px;
+
+    img {
+      width: 450px;
+      margin: 25px;
+    }
   }
+  .videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 450px;
+      margin: 25px;
+    }
   }
-  .tabs{
-    .tab-header{
+
+  .tabs {
+    ::ng-deep .mat-ink-bar{
+      background: #1D1D1E !important;
+    }
+    .tab-header {
       color: beige;
       font-size: 20px;
       font-weight: 100;
     }
-
   }
 }
+
