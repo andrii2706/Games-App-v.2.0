@@ -14,6 +14,7 @@ import {PlayStationComponent} from "../../components/icons/play-station/play-sta
 import {WindowsComponent} from "../../components/icons/windows/windows.component";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTabsModule} from "@angular/material/tabs";
+import {AchivmentsComponent} from "../../components/achivments/achivments.component";
 @NgModule({
   declarations: [
     GamesComponent,
@@ -22,6 +23,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     XboxComponent,
     PlayStationComponent,
     WindowsComponent,
+    AchivmentsComponent
   ],
   imports: [
     GamesroutesModule,
