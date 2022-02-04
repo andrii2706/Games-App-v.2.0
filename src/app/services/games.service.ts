@@ -66,11 +66,13 @@ export class GamesService {
     })
   }
 
-  getTheAchivements(id: number, page: number): Observable<IAchivments[]> {
+  getTheAchivements(id: number, page: number,filter = {} ): Observable<IAchivments[]> {
     return this.httpClient.get<IAchivments[]>(`${this.url}/${id}${this.achievements}`, {
       params: new HttpParams({
         fromObject: {
-          key: this.key
+          key: this.key,
+          page: page,
+          ...filter
         }
       })
     })

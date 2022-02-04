@@ -21,6 +21,12 @@
           <a href="#"><app-windows></app-windows></a>
         </span>
         </div>
+        <div></div>
+        <div>
+          <p>Rating --- {{gameDetails.rating}}</p>
+          <p>Rating --- {{gameDetails.rating_top}}</p>
+        </div>
+        <a href="{{gameDetails.website}}">Game WebSite</a>
       </div>
     </div>
     <div class="games-description">
@@ -37,27 +43,11 @@
           </mat-tab>
           <mat-tab>
             <ng-template mat-tab-label><span class="tab-header">Game Trailers</span></ng-template>
-            <div class="videos" >
+            <div class="videos">
                  <span *ngFor="let video  of videos">
                    <h2>{{video.name}}</h2>
                    <img src="{{video.preview}}" alt="{{video.name}}">
-<!--                   <iframe-->
-<!--                     width="480px"-->
-<!--                     height="480px"-->
-<!--                     [src]="video.date"-->
-<!--                     frameborder="0"-->
-<!--                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
-<!--                     allowfullscreen-->
-<!--                   ></iframe>-->
-                </span>
-            </div>
-          </mat-tab>
-          <mat-tab>
-            <ng-template mat-tab-label><span class="tab-header">Achievements</span></ng-template>
-            <div class="videos" >
-                 <span *ngFor="let video  of videos">
-                   <h2>{{video.name}}</h2>
-                   <img src="{{video.preview}}" alt="{{video.name}}">
+                   <!--                   TODO  show video -->
                    <!--                   <iframe-->
                    <!--                     width="480px"-->
                    <!--                     height="480px"-->
@@ -67,6 +57,14 @@
                    <!--                     allowfullscreen-->
                    <!--                   ></iframe>-->
                 </span>
+            </div>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label><span class="tab-header">Platforms</span></ng-template>
+            <div *ngFor="let pm of gameDetails.platforms" class="platforms">
+              <img src="{{pm.platform.image_background}}" alt="{{pm.platform.name}}">
+              <h2>{{pm.platform.name}}</h2>
+              <span> games on this platform --- {{pm.platform.games_count}}</span>
             </div>
           </mat-tab>
         </mat-tab-group>

@@ -84,6 +84,20 @@ export interface IGamesDetails {
     "20": number,
     "21": number
   },
+  platforms:[
+    {
+      platform: {
+        id: number,
+        name: string,
+        "slug": string,
+        "image": null,
+        "year_end": null,
+        "year_start": null,
+        "games_count": number,
+        "image_background": string
+      }
+    }
+  ]
 }
 export interface IScreenShots {
   "count": number,

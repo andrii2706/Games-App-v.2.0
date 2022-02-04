@@ -68,10 +68,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     img {
       width: 450px;
       margin: 25px;
+      border-radius: 15px;
     }
   }
   .videos{
@@ -82,9 +82,20 @@
     img {
       width: 450px;
       margin: 25px;
+      border-radius: 15px;
     }
   }
-
+  .platforms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+      width: 450px;
+      margin: 25px;
+      border-radius: 15px;
+    }
+  }
   .tabs {
     ::ng-deep .mat-ink-bar{
       background: #1D1D1E !important;
