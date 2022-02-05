@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {SearchDialogWindowComponent} from "../search-dialog-window/search-dialog-window.component";
 
 @Component({
   selector: 'app-wrap',
@@ -7,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WrapComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(
+    public dialog: MatDialog
+
+  ) { }
 
   ngOnInit(): void {
   }
-    openSearchWindow(){
+  openSearchWindow(){
+    const  dialogRef =  this.dialog.open(SearchDialogWindowComponent,{
+      width:'600px'
 
-    }
+    });
+  }
 }

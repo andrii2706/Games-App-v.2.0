@@ -1,0 +1,28 @@
+.mat-dialog-container{
+    background: #C4C4C4 !important;
+    border-radius:15px ;
+    .search-header{
+      background: #1D1D1E;
+      button{
+        background: beige;
+        border: 0px;
+        color: black;
+        padding: 10px;
+        &:hover{
+          color: white;
+          background: black;
+        }
+      }
+    }
+    .container-dialog {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      background: #C4C4C4;
+    }
+    .search-footer{
+      background: #1D1D1E;
+      height: 40px;
+    }
+}
