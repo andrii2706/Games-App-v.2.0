@@ -14,6 +14,7 @@ import {PlayStationComponent} from "../../components/icons/play-station/play-sta
 import {WindowsComponent} from "../../components/icons/windows/windows.component";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatDividerModule} from "@angular/material/divider";
 @NgModule({
   declarations: [
     GamesComponent,
@@ -23,17 +24,18 @@ import {MatTabsModule} from "@angular/material/tabs";
     PlayStationComponent,
     WindowsComponent,
   ],
-  imports: [
-    GamesroutesModule,
-    HttpClientModule,
-    CommonModule,
-    NgxPaginationModule,
-    MatProgressSpinnerModule,
-    NgbModule,
-    MatCardModule,
-    MatIconModule,
-    MatTabsModule,
-  ],
+    imports: [
+        GamesroutesModule,
+        HttpClientModule,
+        CommonModule,
+        NgxPaginationModule,
+        MatProgressSpinnerModule,
+        NgbModule,
+        MatCardModule,
+        MatIconModule,
+        MatTabsModule,
+        MatDividerModule,
+    ],
 
   exports: [],
 

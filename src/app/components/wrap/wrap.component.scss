@@ -33,23 +33,30 @@
     background: none;
     border: 0;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       color: #C4C4C4;
     }
   }
-  .login-btn{
-    button{
+
+  .login-btn {
+    button {
       width: 120px;
       height: 40px;
       border-radius: 10px;
       background: beige;
       font-size: 20px;
       font-weight: 400;
-      &:hover{
+
+      &:hover {
         background: #C4C4C4;
         color: white;
         cursor: pointer;
       }
     }
+  }
+
+  .dropdown-menu {
+    color: white;
   }
 }

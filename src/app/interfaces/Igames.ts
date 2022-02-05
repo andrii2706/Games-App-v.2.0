@@ -9,6 +9,7 @@ export interface IGame {
   rating_top: number,
   metacritic: number
 }
+
 export interface IGames {
   count: number,
   next: string,
@@ -16,23 +17,25 @@ export interface IGames {
   results: IGame[],
   seo_title: string,
   seo_h1: string,
-  filters:{
-    years:[
+  filters: {
+    years: [
       Years[]
     ]
   }
 }
+
 interface Years {
   from: number,
   to: number,
   filter: string,
   decade: number,
-  years:{
-    year:number,
-    count:number,
+  years: {
+    year: number,
+    count: number,
     noFollow: false
   }
 }
+
 export interface IGamesDetails {
   id: number,
   slug: string,
@@ -40,10 +43,10 @@ export interface IGamesDetails {
   name_original: string,
   description: string,
   metacritic: number,
-  metacritic_platforms:[{
-    metascore:number,
+  metacritic_platforms: [{
+    metascore: number,
     url: string,
-    platform:{
+    platform: {
       name: string
     }
 
@@ -56,7 +59,7 @@ export interface IGamesDetails {
   "website": string,
   "rating": number,
   "rating_top": number,
-  "ratings":[
+  "ratings": [
     {
       "id": number,
       "title": string,
@@ -84,7 +87,7 @@ export interface IGamesDetails {
     "20": number,
     "21": number
   },
-  platforms:[
+  platforms: [
     {
       platform: {
         id: number,
@@ -96,74 +99,81 @@ export interface IGamesDetails {
         "games_count": number,
         "image_background": string
       },
-      requirements_en:{
+      requirements_en: {
         minimum: string,
         recommended: string
       }
     }
   ],
-  genres:[
+  genres: [
     {
-      id:number,
+      id: number,
       name: string,
       slug: string,
       image_background: string
     }
   ],
-  stores:[
+  stores: [
     {
-      id:number,
-      name: string,
-      slug:string,
-      domain:string,
-      image_background:string
+      id: number,
+      store: {
+        id: number,
+        name: string,
+        slug: string,
+        domain: string,
+        image_background: string
+      }
     }
   ],
-  tags:[
+  tags: [
     {
-      id:number,
-      name:string,
-      slug:string,
+      id: number,
+      name: string,
+      slug: string,
       language: string,
       image_background: string
     }
   ]
 }
+
 export interface IScreenShots {
   "count": number,
   "next": null,
   "previous": null,
-  results:[
+  results: [
     {
-      "id":number,
+      "id": number,
       "image": string,
-      "is_deleted":boolean
+      "is_deleted": boolean
     }
   ]
 }
+
 export interface IScreenShot {
-  "id":number,
+  "id": number,
   "image": string,
-  "is_deleted":boolean
+  "is_deleted": boolean
 }
+
 export interface IGameTrailers {
   count: number,
   next: null,
   previous: null,
   results: [
     {
-      id:number,
+      id: number,
       name: string,
       preview: string,
       date: {
         480: string,
-        max:string,
+        max: string,
       }
     }
   ]
 }
+
 export interface IGameTrailer {
-  id:number,
+  id: number,
   name: string,
   preview: string,
   date: object

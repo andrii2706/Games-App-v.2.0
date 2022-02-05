@@ -29,7 +29,6 @@
         </span>
         </div>
         <div class="game-rating">
-
           <div>
             <h2>Genres</h2>
             <ul>
@@ -44,6 +43,15 @@
     </div>
     <div class="games-description">
       <div [innerHTML]="gameDetails.description" *ngIf="gameDetails"></div>
+      <div>
+        <div class="stores-header"><h2>Stores</h2></div>
+        <mat-divider></mat-divider>
+        <div class="stores">
+          <div *ngFor="let str of gameDetails.stores">
+            <a href="{{str.store.domain}}">{{str.store.name}}</a>
+          </div>
+        </div>
+      </div>
       <div>
         <mat-tab-group class="tabs">
           <mat-tab>

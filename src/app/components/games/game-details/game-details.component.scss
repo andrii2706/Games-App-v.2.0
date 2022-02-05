@@ -29,8 +29,44 @@
     }
   }
 
+  .stores-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .stores {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div > a {
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      background: #1D1D1E;
+      border: 1px solid #1D1D1E;
+      padding: 10px;
+      color: #C4C4C4;
+      font-weight: 400;
+      margin-right: 20px;
+
+      &:hover {
+        color: black;
+        border: 1px solid white;
+        background: white;
+      }
+    }
+  }
+
   ul {
     padding-left: 0;
+
     li {
       list-style: none;
     }
