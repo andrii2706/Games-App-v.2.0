@@ -1,4 +1,22 @@
 <div id="wrap" class="nav-bar">
+  <div>
+    <button mat-icon-button [mat-menu-trigger-for]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu" class="menu">
+      <button>Creator-role</button>
+      <mat-divider></mat-divider>
+      <button>creators</button>
+      <mat-divider></mat-divider>
+      <button>Developers </button>
+      <mat-divider></mat-divider>
+      <button>Tags</button>
+      <mat-divider></mat-divider>
+      <button>Stores</button>
+      <mat-divider></mat-divider>
+      <button>Publisher</button>
+      <mat-divider></mat-divider>
+      <button>Platforms</button>
+    </mat-menu>
+  </div>
   <div id="nav" class="nav-links">
     <a routerLink="">Home</a>
     <a routerLink="games">Games</a>
@@ -11,7 +29,7 @@
   <div id="user-icon">
 
   </div>
-  <div id="login-btn">
+  <div class="login-btn">
     <button>Login</button>
   </div>
 </div>

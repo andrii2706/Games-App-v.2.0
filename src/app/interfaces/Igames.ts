@@ -95,7 +95,37 @@ export interface IGamesDetails {
         "year_start": null,
         "games_count": number,
         "image_background": string
+      },
+      requirements_en:{
+        minimum: string,
+        recommended: string
       }
+    }
+  ],
+  genres:[
+    {
+      id:number,
+      name: string,
+      slug: string,
+      image_background: string
+    }
+  ],
+  stores:[
+    {
+      id:number,
+      name: string,
+      slug:string,
+      domain:string,
+      image_background:string
+    }
+  ],
+  tags:[
+    {
+      id:number,
+      name:string,
+      slug:string,
+      language: string,
+      image_background: string
     }
   ]
 }

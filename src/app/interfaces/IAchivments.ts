@@ -1,8 +1,8 @@
 export interface IAchivments {
   count: number,
-  next: string,
-  previous: string,
-  results:[
+  next: null,
+  previous: null,
+  results: [
     {
       id: number,
       name: string,
@@ -12,3 +12,5 @@ export interface IAchivments {
     }
   ]
 }
+
+

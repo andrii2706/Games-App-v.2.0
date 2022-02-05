@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {IGamesDetails, IGameTrailer, IGameTrailers, IScreenShots} from "../../../interfaces/Igames";
+import {IGamesDetails} from "../../../interfaces/Igames";
 import {ActivatedRoute} from "@angular/router";
 import {GamesService} from "../../../services/games.service";
 import {IAchivments} from "../../../interfaces/IAchivments";
@@ -11,12 +11,10 @@ import {IAchivments} from "../../../interfaces/IAchivments";
 })
 
 export class GameDetailsComponent implements OnInit {
-  //*TODO fix: fing solution for this how to make it in proper way with out this thing
   screenShots: [{ id: number; image: string; is_deleted: boolean }]
   videos: [{ id: number; name: string; preview: string; date: { 480: string, max: string } }]
-  // achievements :IAchivments[]
-  // page :1
-  // tabs: ['ScreenShots', 'Videos', 'DLS', 'Trailer', 'Youtube videos about games']
+  achievements: [{ id: number; name: string; description: string; image: string; percent: string }]
+
   @ViewChild('description')
   gameDescription: ElementRef
   @Input()
@@ -28,18 +26,26 @@ export class GameDetailsComponent implements OnInit {
     private gamesService: GamesService
   ) {
     this.activatedRoute.params.subscribe(({id}) => {
-      this.gamesService.getGameById(id).subscribe(value =>  console.log(this.gameDetails = value))
-
+      this.gamesService.getGameById(id).subscribe(value => {
+        this.gameDetails = value
+      })
       this.gamesService.getGameScreenShots(id).subscribe(value => {
         this.screenShots = value.results
       })
       this.gamesService.getGameTrailers(id).subscribe(value => {
         this.videos = value.results
       })
+      this.gamesService.getTheAchivements(id).subscribe(value => {
+        this.achievements = value.results
+      })
     })
   }
 
   ngOnInit(): void {
+  }
+
+  backButton() {
+    history.back()
   }
 
 }

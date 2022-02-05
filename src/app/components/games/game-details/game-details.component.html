@@ -3,11 +3,18 @@
     <mat-spinner></mat-spinner>
   </div>
   <div *ngIf="gameDetails">
+    <div class="btn-back">
+      <button (click)="backButton()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
     <div class="game-header">
       <div class="game-image">
+        <div class="metacritic-position">
+          <span [innerText]="gameDetails.metacritic"></span>
+        </div>
         <img src="{{gameDetails.background_image}}" alt="Image Poster" width="450px">
       </div>
-      <div class="metacritic-position" [innerText]="gameDetails.metacritic"></div>
       <div class="game-name">
         <h1>{{gameDetails.name_original}}</h1>
         <div>
@@ -21,12 +28,18 @@
           <a href="#"><app-windows></app-windows></a>
         </span>
         </div>
-        <div></div>
-        <div>
+        <div class="game-rating">
+
+          <div>
+            <h2>Genres</h2>
+            <ul>
+              <li *ngFor="let genre of gameDetails.genres">{{genre.name}}</li>
+            </ul>
+          </div>
           <p>Rating --- {{gameDetails.rating}}</p>
           <p>Rating --- {{gameDetails.rating_top}}</p>
         </div>
-        <a href="{{gameDetails.website}}">Game WebSite</a>
+        <a href="{{gameDetails.website}}">Game WebSite </a>
       </div>
     </div>
     <div class="games-description">
@@ -64,7 +77,15 @@
             <div *ngFor="let pm of gameDetails.platforms" class="platforms">
               <img src="{{pm.platform.image_background}}" alt="{{pm.platform.name}}">
               <h2>{{pm.platform.name}}</h2>
-              <span> games on this platform --- {{pm.platform.games_count}}</span>
+              <span>games on this platform --- {{pm.platform.games_count}}</span>
+            </div>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label><span class="tab-header">Achievement's</span></ng-template>
+            <div class="platforms" *ngFor="let achievement of achievements ">
+              <img src="{{achievement.image}}" alt="{{achievement.name}}">
+              <h2>{{achievement.name}}</h2>
+              <p>{{achievement.description}}</p>
             </div>
           </mat-tab>
         </mat-tab-group>

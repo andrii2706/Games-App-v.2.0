@@ -13,6 +13,9 @@ import { GitIconComponent } from './components/icons/git-icon/git-icon.component
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PipePipe } from './pipes/pipe.pipe';
+import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatDividerModule} from "@angular/material/divider";
 
 const routes: Routes = [
   {
@@ -44,6 +47,9 @@ const routes: Routes = [
     MatIconModule,
     HttpClientModule,
     NgbModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

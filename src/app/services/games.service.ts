@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IGames, IGamesDetails, IGameTrailer, IGameTrailers, IScreenShots} from "../interfaces/Igames";
-import {IAchivments} from "../interfaces/IAchivments";
+import { IAchivments} from "../interfaces/IAchivments";
 
 @Injectable({
   providedIn: 'root'
@@ -66,13 +66,11 @@ export class GamesService {
     })
   }
 
-  getTheAchivements(id: number, page: number,filter = {} ): Observable<IAchivments[]> {
-    return this.httpClient.get<IAchivments[]>(`${this.url}/${id}${this.achievements}`, {
+  getTheAchivements(id: number): Observable<IAchivments> {
+    return this.httpClient.get<IAchivments>(`${this.url}/${id}${this.achievements}`, {
       params: new HttpParams({
         fromObject: {
           key: this.key,
-          page: page,
-          ...filter
         }
       })
     })

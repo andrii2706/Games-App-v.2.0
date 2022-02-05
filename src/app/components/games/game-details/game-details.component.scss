@@ -8,6 +8,44 @@
   align-items: center;
   flex-direction: column;
 
+  .btn-back {
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0px;
+      padding: 10px;
+      border-radius: 10px;
+      background: #1D1D1E;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background: #C4C4C4;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: #C4C4C4;
+    }
+  }
+
   .metacritic-position {
     font-size: 25px;
     font-weight: 400;
@@ -15,11 +53,13 @@
     background: #1D1D1E;
     border: 1px solid #1D1D1E;
     border-radius: 50%;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     position: absolute;
-    top: 410px;
-    margin-left: 345px;
+    width: 40px;
+    padding: 15px;
 
   }
 
@@ -38,6 +78,12 @@
     span {
       margin-right: 10px;
     }
+
+    .game-rating {
+      color: white;
+      font-size: 20px;
+      margin: 25px;
+    }
   }
 
   .game-header {
@@ -50,6 +96,7 @@
     margin: 25px;
 
     img {
+      position: relative;
       width: 600px;
       border-radius: 10px;
     }
@@ -60,7 +107,7 @@
   color: white;
   font-size: 15px;
   letter-spacing: 1px;
-  max-width: 800px;
+  max-width: 1200px;
   padding: 25px;
 
   .screenshots {
@@ -68,38 +115,45 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     img {
       width: 450px;
       margin: 25px;
       border-radius: 15px;
     }
   }
-  .videos{
+
+  .videos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     img {
       width: 450px;
       margin: 25px;
       border-radius: 15px;
     }
   }
-  .platforms{
+
+  .platforms {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    img{
+
+    img {
       width: 450px;
       margin: 25px;
       border-radius: 15px;
     }
   }
+
   .tabs {
-    ::ng-deep .mat-ink-bar{
+    ::ng-deep .mat-ink-bar {
       background: #1D1D1E !important;
     }
+
     .tab-header {
       color: beige;
       font-size: 20px;

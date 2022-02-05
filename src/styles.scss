@@ -39,6 +39,7 @@ html, body {
 }
 
 body {
+  user-select: none;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: rgb(13, 13, 22, 0.63)!important;
