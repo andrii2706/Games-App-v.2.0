@@ -20,6 +20,8 @@ import {SearchDialogWindowComponent} from "./components/search-dialog-window/sea
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {UserAccountComponent} from "./components/user-account/user-account.component";
+import {MatTableModule} from "@angular/material/table";
 
 const routes: Routes = [
   {
@@ -35,16 +37,17 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WrapComponent,
-    HomeComponent,
-    SearchDialogWindowComponent,
-    FooterComponent,
-    LinkedinIconComponent,
-    GitIconComponent,
-    PipePipe,
-  ],
+    declarations: [
+        AppComponent,
+        WrapComponent,
+        HomeComponent,
+        SearchDialogWindowComponent,
+        FooterComponent,
+        LinkedinIconComponent,
+        GitIconComponent,
+        PipePipe,
+        UserAccountComponent,
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -57,7 +60,8 @@ const routes: Routes = [
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
