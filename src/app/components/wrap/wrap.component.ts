@@ -20,8 +20,8 @@ export class WrapComponent implements OnInit {
   }
   openSearchWindow(){
     const  dialogRef =  this.dialog.open(SearchDialogWindowComponent,{
-      width:'600px'
-
+      width:'75%',
+      panelClass: 'mat-dialog-container-custome'
     });
   }
 }

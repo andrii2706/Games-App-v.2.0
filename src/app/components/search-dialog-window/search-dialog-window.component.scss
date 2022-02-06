@@ -1,28 +1,52 @@
-.mat-dialog-container{
-    background: #C4C4C4 !important;
-    border-radius:15px ;
-    .search-header{
-      background: #1D1D1E;
-      button{
-        background: beige;
-        border: 0px;
-        color: black;
-        padding: 10px;
-        &:hover{
-          color: white;
-          background: black;
-        }
+::ng-deep.mat-dialog-container{
+  background: #C4C4C4 !important;
+  padding: 0;
+  border-radius:15px ;
+  .search-header{
+    background: #1D1D1E;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    button{
+      background: beige;
+      border-radius: 10px;
+      border: 0px;
+      color: black;
+      padding: 10px;
+      &:hover{
+        color: white;
+        background: #C4C4C4;
       }
     }
-    .container-dialog {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 80px;
-      background: #C4C4C4;
+  }
+  .container-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    height: 200px;
+    background: #C4C4C4;
+  }
+  .search-footer{
+    padding: 10px;
+    background: #1D1D1E;
+    height: 40px;
+  }
+  .search-dialog {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    background: #1D1D1E;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: #C4C4C4;
     }
-    .search-footer{
-      background: #1D1D1E;
-      height: 40px;
-    }
+  }
 }
+
