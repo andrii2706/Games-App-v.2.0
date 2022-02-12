@@ -33,6 +33,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/games/games.module').then(m=>m.GamesModule)
   },
   {
+    path:'developers',
+    loadChildren: () => import('./modules/developers/developers.module').then(m=>m.DevelopersModule)
+  },
+  {
     path: 'user',
     component:UserAccountComponent
   }
