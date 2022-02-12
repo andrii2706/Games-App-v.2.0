@@ -18,3 +18,11 @@ export interface IDevGames{
   "name": string,
   "added": number
 }
+export interface IDevelopersDetails {
+  id: number,
+  name: string,
+  slug: string,
+  games_count: string,
+  image_background: string,
+  description: string
+}

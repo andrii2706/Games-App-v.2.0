@@ -2,7 +2,6 @@ import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {IGamesDetails} from "../../../interfaces/Igames";
 import {ActivatedRoute} from "@angular/router";
 import {GamesService} from "../../../services/games.service";
-import {IAchivments} from "../../../interfaces/IAchivments";
 
 @Component({
   selector: 'app-game-details',

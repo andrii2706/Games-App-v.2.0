@@ -1,0 +1,24 @@
+<div *ngIf="!developerDetails" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="developerDetails">
+  <div class="developer-description">
+    <div class="btn-back">
+      <button (click)="backToDevelopers()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
+    <div class="developer-desc">
+      <div class="developers-title">
+        <h1>{{developerDetails.name}}</h1>
+        <span>Games of developer - {{developerDetails.games_count}}</span>
+      </div>
+      <div class="developers-image">
+        <img src="{{developerDetails.image_background}}">
+      </div>
+    </div>
+    <div>
+      <p>{{developerDetails.description}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.developers-card {
+  margin: 20px;
+  div {
+    width: 450px;
+    background: #1D1D1E;
+    border-radius: 10px;
+    img {
+      width: 450px;
+      height: 350px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
+
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      color: white;
+    }
+
+    ul {
+      li {
+        color: white;
+      }
+    }
+  }
+}

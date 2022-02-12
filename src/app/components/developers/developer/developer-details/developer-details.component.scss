@@ -1,0 +1,65 @@
+.developer-description {
+  margin: 50px;
+  background: #7a7a7a;
+  padding: 50px;
+  border-radius: 10px;
+  height: 90vh;
+
+  .developer-desc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .developers-title {
+      h1 {
+        font-size: 40px;
+        margin-right: 25px;
+      }
+
+      span {
+        font-size: 25px
+      }
+    }
+
+    .developers-image {
+      img {
+        width: 450px;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .btn-back {
+    margin: 25px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0px;
+      padding: 10px;
+      border-radius: 10px;
+      background: #1D1D1E;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background: #C4C4C4;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  ::ng-deep .mat-spinner circle {
+    stroke: white;
+  }
+}
