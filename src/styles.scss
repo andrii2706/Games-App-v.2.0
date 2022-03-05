@@ -33,15 +33,17 @@ $games-app-theme: mat.define-light-theme((
 @include mat.all-component-themes($games-app-theme);
 
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;300;400;500&display=swap');
 html, body {
   height: auto;
+  font-family:'Smooch Sans', sans-serif !important;
+  scroll-behavior: smooth;
 }
 
 body {
+
   user-select: none;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   background: rgb(13, 13, 22, 0.63)!important;
   letter-spacing: 1px;
 }

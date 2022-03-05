@@ -1,4 +1,6 @@
 .game-details {
+  font-family: "Smooch Sans", sans-serif !important;
+  font-size: 30px;
   background: rgb(125, 123, 123, 0.80);
   margin: 25px;
   padding: 15px;
@@ -36,6 +38,8 @@
 
     h2 {
       color: white;
+      font-family: "Smooch Sans", sans-serif !important;
+      font-size: 35px;
     }
   }
 
@@ -95,8 +99,9 @@
     z-index: 1;
     position: absolute;
     width: 40px;
-    padding: 15px;
-
+    height: 40px;
+    padding: 5px;
+    top: 21%;
   }
 
   .game-name {
@@ -108,6 +113,8 @@
     h1 {
       color: white;
       padding-bottom: 5px;
+      font-family: "Smooch Sans", sans-serif !important;
+      font-size: 30px;
       border-bottom: 1px solid white;
     }
 
