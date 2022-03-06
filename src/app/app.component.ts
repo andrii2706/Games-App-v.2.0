@@ -8,27 +8,14 @@ import {ViewportScroller} from "@angular/common";
 })
 
 export class AppComponent {
-  @HostListener('window:scroll', ['$event']) onScroll(event: any){
+  @HostListener('window:scroll', ['$event']) onScroll(event: any) {
     let pageYoffset = window.pageYOffset;
   }
 
-  constructor(private scroll: ViewportScroller) { }
-
-  ngOnInit(): void{
-
+  constructor(private scroll: ViewportScroller) {
   }
 
-  showOrHideButton(){
-    const position  = window.pageYOffset;
-    if (position === 0){
-
-    }else if(position >= 500){
-
-    }
-  }
-
-  scrollToTop(){
-    this.scroll.scrollToPosition([0,0]);
-    this.showOrHideButton()
+  scrollToTop() {
+    this.scroll.scrollToPosition([0, 0]);
   }
 }

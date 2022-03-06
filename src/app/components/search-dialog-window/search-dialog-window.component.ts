@@ -8,6 +8,7 @@ import {MatDialogRef} from "@angular/material/dialog";
   styleUrls: ['./search-dialog-window.component.scss']
 })
 export class SearchDialogWindowComponent implements OnInit {
+  favoriteColor = '';
 
   constructor(
     public dialogRef: MatDialogRef<any>,
@@ -20,4 +21,8 @@ export class SearchDialogWindowComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+  onSearch(){
+    console.log(this.favoriteColor);
+  }
+
 }

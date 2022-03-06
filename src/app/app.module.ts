@@ -22,6 +22,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {UserAccountComponent} from "./components/user-account/user-account.component";
 import {MatTableModule} from "@angular/material/table";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -69,7 +70,10 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
