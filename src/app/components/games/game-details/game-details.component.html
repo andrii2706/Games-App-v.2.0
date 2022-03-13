@@ -1,5 +1,5 @@
 <div id="games-details" class="game-details">
-  <div *ngIf="!gameDetails">
+  <div class="loader" *ngIf="!gameDetails">
     <mat-spinner></mat-spinner>
   </div>
   <div *ngIf="gameDetails">

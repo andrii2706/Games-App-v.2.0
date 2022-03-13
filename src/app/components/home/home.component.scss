@@ -1,0 +1,60 @@
+.home-body{
+  font-family:'Smooch Sans', sans-serif !important;
+  color: white;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  .home-header{
+    height: 100%;
+    font-family:'Smooch Sans', sans-serif !important;
+    div{
+      margin: 20px;
+      font-family:'Smooch Sans', sans-serif !important;
+      h1{
+        font-family:'Smooch Sans', sans-serif !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        font-size: 72px;
+        line-height: 86px;
+      }
+    }
+    div{
+      span{
+        font-size: 16px;
+        line-height: 16px;
+        color: rgba(87, 184, 255, 1);
+        text-transform: uppercase;
+        margin-left: 10px;
+        margin-bottom: -5px
+      }
+    }
+    span{
+
+    }
+    p{
+
+    }
+    .image-with-npc{
+      img {
+        height: 518px;
+        width: 660px;
+      }
+    }
+  }
+}
+.flex{
+  display: flex;
+}
+.justify-start{
+  justify-items: flex-start;
+}
+.justify-center{
+  justify-items: center;
+}
+.justify-end{
+  justify-items: flex-end;
+}
+.items-center{
+  align-items: center;
+}

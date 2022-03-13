@@ -6,8 +6,8 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'games-app';
-
+  title = 'Unleash the Next Generation of Gaming';
+  subtitle = 'Future of eSPORTS';
   constructor() { }
 
   ngOnInit(): void {
