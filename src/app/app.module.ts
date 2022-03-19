@@ -19,7 +19,7 @@ import {MatDividerModule} from "@angular/material/divider";
 import {SearchDialogWindowComponent} from "./components/search-dialog-window/search-dialog-window.component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {MatDialogModule} from "@angular/material/dialog";
 import {UserAccountComponent} from "./components/user-account/user-account.component";
 import {MatTableModule} from "@angular/material/table";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path:'developers',
     loadChildren: () => import('./modules/developers/developers.module').then(m=>m.DevelopersModule)
+  },
+  {
+    path:'consoles',
+    loadChildren: () => import('./modules/cosonsoles/cosonsoles.module').then(m=>m.CosonsolesModule)
   },
   {
     path: 'user',
