@@ -4,7 +4,7 @@ export interface IConsoles {
   previous: string,
   results: IConsole[]
 }
-interface IConsole {
+export interface IConsole {
   id: number,
   name: string,
   slug : string,
