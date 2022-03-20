@@ -18,6 +18,7 @@ export class ConsolesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllConsoles(1);
+    this.getTotalItems();
   }
   getAllConsoles (Newpage :number) {
     this.consolesService.getAllConsoles(Newpage).subscribe(value => {this.console = value.results})
@@ -25,5 +26,8 @@ export class ConsolesComponent implements OnInit {
   navigateTo(Newpage: number){
     this.page = Newpage,
       this.getAllConsoles(Newpage)
+  }
+  getTotalItems():void{
+    this.consolesService.getTotalItemsConsoles().subscribe(value => this.consoles = value)
   }
 }

@@ -1,5 +1,15 @@
 <div>
-  <div>
-    <app-console *ngFor="let consol of console" [consol]="consol"></app-console>
+  <div *ngIf="!console" class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div  *ngIf="consoles">
+    <div class="list-of-cards">
+      <app-console
+        *ngFor="let consol of console | paginate :{ itemsPerPage: 25, currentPage: page, totalItems:consoles.count}"
+        [consol]="consol"></app-console>
+    </div>
+  </div>
+  <div class="pagination-controllers">
+    <pagination-controls class="pagination" (pageChange)="navigateTo($event)"></pagination-controls>
   </div>
 </div>

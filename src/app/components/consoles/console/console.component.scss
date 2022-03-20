@@ -1,0 +1,25 @@
+.card-consoles{
+  max-width: 500px;
+  margin: 25px;
+  background: #7a7a7a;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  color: white;
+  img{
+    width:100%;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+  }
+  .description{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 15px;
+    h1{
+      margin-right: 10px;
+    }
+    span{
+      font-size: 35px;
+    }
+  }
+}

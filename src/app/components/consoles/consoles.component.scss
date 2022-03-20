@@ -1,0 +1,22 @@
+.list-of-cards{
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pagination-controllers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  height: 100vh;
+  ::ng-deep .mat-spinner circle {
+    stroke: white;
+  }
+}

@@ -26,5 +26,13 @@ export class ConsolesService {
       })
     })
   }
-
+  getTotalItemsConsoles(): Observable<IConsoles>{
+    return this.httpClient.get<IConsoles>(`${this.consolesUrl}`, {
+      params: new HttpParams({
+        fromObject :{
+          key :  this.key
+        }
+      })
+    })
+  }
 }
