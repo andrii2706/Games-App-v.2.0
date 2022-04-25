@@ -1,23 +1,6 @@
 <div id="wrap" class="nav-bar">
-  <div class="dropdown-menu">
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu" class="menu">
-      <button mat-menu-item>Creator-role</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item>creators</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item>Developers</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item>Tags</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item>Stores</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item>Publisher</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item>Platforms</button>
-    </mat-menu>
+  <div class="login-btn">
+    <button>Login</button>
   </div>
   <div id="nav" class="nav-links">
     <a routerLink="">Home</a>
@@ -28,12 +11,8 @@
       <mat-icon>search</mat-icon>
     </button>
   </div>
-  <div class="login-btn">
-    <button>Login</button>
-  </div>
   <div class="user-icon">
     <a routerLink="user">
-<!--      TODO create component for user and routing for user-->
       <mat-icon>supervised_user_circle</mat-icon>
     </a>
   </div>

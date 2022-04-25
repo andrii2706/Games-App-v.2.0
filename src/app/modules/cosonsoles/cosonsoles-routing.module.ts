@@ -7,10 +7,6 @@ const routes: Routes = [
     path: '',
     component: ConsolesComponent
   },
-  // {
-  //   path: ':id',
-  //   component: ConsolesComponent
-  // }
 ];
 
 @NgModule({
