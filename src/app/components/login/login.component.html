@@ -1,17 +1,75 @@
 <div class="login-modal">
-
-  <form>
-    <input type="text"> <!-- username -->
-    <input type="name"> <!-- secandName-->
-    <input type="text"> <!-- email -->
-    <input type="number"> <!-- phone -->
-<!--    <input type="password"> &lt;!&ndash; password &ndash;&gt;-->
-    <ng-content></ng-content>
-    <a class="type-toggle" (click)="toggleShow()">
-      <mat-icon class="hide-option" [hidden]="showPassword">cancel</mat-icon>
-      <mat-icon class="show-option" [hidden]="!showPassword">remove_red_eye</mat-icon>
-    </a>
-  </form>
-  <div class=""></div>
+  <div class="dialog-header">
+    <button (click)="oNClick()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="padding-for-form">
+    <form class="login-form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input autocomplete="false" matInput type="text" placeholder="Leanne">
+<!--        <mat-hint>Errors appear instantly!</mat-hint>-->
+<!--        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
+<!--          Please enter a valid email address-->
+<!--        </mat-error>-->
+<!--        <mat-error *ngIf="emailFormControl.hasError('required')">-->
+<!--          Email is <strong>required</strong>-->
+<!--        </mat-error>-->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Surname</mat-label>
+        <input autocomplete="false" matInput type="text" placeholder="Graham">
+        <!--        <mat-hint>Errors appear instantly!</mat-hint>-->
+        <!--        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
+        <!--          Please enter a valid email address-->
+        <!--        </mat-error>-->
+        <!--        <mat-error *ngIf="emailFormControl.hasError('required')">-->
+        <!--          Email is <strong>required</strong>-->
+        <!--        </mat-error>-->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input  matInput type="text" placeholder="Ex. pat@example.com">
+        <!--        <mat-hint>Errors appear instantly!</mat-hint>-->
+        <!--        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
+        <!--          Please enter a valid email address-->
+        <!--        </mat-error>-->
+        <!--        <mat-error *ngIf="emailFormControl.hasError('required')">-->
+        <!--          Email is <strong>required</strong>-->
+        <!--        </mat-error>-->
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input  matInput type="text" placeholder="+38069535214">
+        <!--        <mat-hint>Errors appear instantly!</mat-hint>-->
+        <!--        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
+        <!--          Please enter a valid email address-->
+        <!--        </mat-error>-->
+        <!--        <mat-error *ngIf="emailFormControl.hasError('required')">-->
+        <!--          Email is <strong>required</strong>-->
+        <!--        </mat-error>-->
+      </mat-form-field>
+      <app-show-hide-password>
+        <mat-form-field class="password">
+          <mat-label>Password</mat-label>
+          <input matInput type="password">
+          <!--        <mat-hint>Errors appear instantly!</mat-hint>-->
+          <!--        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
+          <!--          Please enter a valid email address-->
+          <!--        </mat-error>-->
+          <!--        <mat-error *ngIf="emailFormControl.hasError('required')">-->
+          <!--          Email is <strong>required</strong>-->
+          <!--        </mat-error>-->
+        </mat-form-field>
+      </app-show-hide-password>
+      <div class="position-button-form">
+        <button class="button-form">
+          <mat-icon>login</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="dialog-footer"></div>
 </div>
 

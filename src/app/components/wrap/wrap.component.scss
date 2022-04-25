@@ -26,6 +26,7 @@
       margin-right: 20px;
 
       &:hover {
+        transition: all 300ms ease-in-out;
         color: #C4C4C4;
       }
     }
@@ -41,6 +42,7 @@
     cursor: pointer;
 
     &:hover {
+      transition: all 300ms ease-in-out;
       color: #C4C4C4;
     }
   }
@@ -55,6 +57,7 @@
       font-weight: 400;
 
       &:hover {
+        transition: all 300ms ease-in-out;
         background: #C4C4C4;
         color: white;
         cursor: pointer;
@@ -67,6 +70,7 @@
       color: white;
       text-decoration: none;
       &:hover{
+        transition: all 300ms ease-in-out;
         color: #C4C4C4;
       }
     }

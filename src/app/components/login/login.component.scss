@@ -1,17 +1,64 @@
-.login-modal {
-  :host {
-    display: flex;
-    width: 100%;
-    align-items: center;
+::ng-deep.mat-dialog-container {
+  background: #C4C4C4 !important;
+  padding: 0;
+  border-radius: 15px;
+ .dialog-footer, .dialog-header{
+   background: #1D1D1E;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+ }
+  .dialog-header{
+    padding: 10px;
+  }
+  .dialog-footer{
+    padding: 40px;
+  }
+  .login-modal {
+    .login-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-    .type-toggle {
-      padding-inline-start: 0.5rem;
+    }
+    .position-button-form{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .button-form{
+      background: #1D1D1E;
+      border-radius: 10px;
+      border: 0px;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
 
-      .show-option,
-      .hide-option {
-        font-size: 1.2rem;
-        display: block;
+      &:hover {
+        transition: all 300ms ease-in-out;
+        color: #1D1D1E;
+        background: white;
+      }
+    }
+
+    button {
+      background: beige;
+      border-radius: 10px;
+      border: 0px;
+      color: black;
+      padding: 10px;
+      cursor: pointer;
+
+      &:hover {
+        transition: all 300ms ease-in-out;
+        color: white;
+        background: #C4C4C4;
       }
     }
   }
+}
+.padding-for-form{
+  padding: 40px;
 }
