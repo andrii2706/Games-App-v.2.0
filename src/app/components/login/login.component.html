@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="login-modal">
+
+  <form>
+    <input type="text"> <!-- username -->
+    <input type="name"> <!-- secandName-->
+    <input type="text"> <!-- email -->
+    <input type="number"> <!-- phone -->
+<!--    <input type="password"> &lt;!&ndash; password &ndash;&gt;-->
+    <ng-content></ng-content>
+    <a class="type-toggle" (click)="toggleShow()">
+      <mat-icon class="hide-option" [hidden]="showPassword">cancel</mat-icon>
+      <mat-icon class="show-option" [hidden]="!showPassword">remove_red_eye</mat-icon>
+    </a>
+  </form>
+  <div class=""></div>
+</div>
+

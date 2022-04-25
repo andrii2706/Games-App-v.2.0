@@ -25,6 +25,7 @@ import {MatTableModule} from "@angular/material/table";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/login/registration/registration.component';
+import { ShowHidePasswordComponent } from './components/login/registration/show-hide-password/show-hide-password.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,7 @@ const routes: Routes = [
         UserAccountComponent,
         LoginComponent,
         RegistrationComponent,
+        ShowHidePasswordComponent,
     ],
   imports: [
     BrowserModule,

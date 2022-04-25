@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {SearchDialogWindowComponent} from "../search-dialog-window/search-dialog-window.component";
+import {LoginComponent} from "../login/login.component";
 
 @Component({
   selector: 'app-wrap',
@@ -23,5 +24,12 @@ export class WrapComponent implements OnInit {
       width:'75%',
       panelClass: 'mat-dialog-container-custome'
     });
+  }
+  openLoginModal(){
+    const loginRef = this.dialog.open(LoginComponent,{
+      width: '75%',
+      height: 'auto',
+      panelClass: 'mat-dialog-container-custome'
+    })
   }
 }
