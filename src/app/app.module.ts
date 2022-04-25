@@ -23,6 +23,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {UserAccountComponent} from "./components/user-account/user-account.component";
 import {MatTableModule} from "@angular/material/table";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { LoginComponent } from './components/login/login.component';
+import { RegistrationComponent } from './components/login/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -60,6 +62,8 @@ const routes: Routes = [
         GitIconComponent,
         PipePipe,
         UserAccountComponent,
+        LoginComponent,
+        RegistrationComponent,
     ],
   imports: [
     BrowserModule,
