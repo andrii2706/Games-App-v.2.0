@@ -1,7 +1,5 @@
 .game-details {
-  position: absolute;
-  z-index: 0;
-  top: 70px;
+  width: 95%;
   font-family: "Smooch Sans", sans-serif !important;
   font-size: 30px;
   background: rgb(125, 123, 123, 0.80);
@@ -25,7 +23,7 @@
       color: white;
       font-size: 20px;
       cursor: pointer;
-
+      transition: 300ms ease-out;
       &:hover {
         background: #C4C4C4;
         color: black;
@@ -90,7 +88,7 @@
   }
 
   .metacritic-position {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 400;
     color: white;
     background: #1D1D1E;
@@ -101,10 +99,11 @@
     align-items: center;
     z-index: 1;
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     padding: 5px;
-    top: 21%;
+    top: -26px;
+    left: -26px;
   }
 
   .game-name {
@@ -140,7 +139,7 @@
 
   .game-image {
     margin: 25px;
-
+    position: relative;
     img {
       position: relative;
       width: 600px;
