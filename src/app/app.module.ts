@@ -45,7 +45,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/cosonsoles/cosonsoles.module').then(m=>m.CosonsolesModule)
   },
   {
-    path: 'user',
+    path: 'profile/:id',
     component:UserAccountComponent
   }
 
