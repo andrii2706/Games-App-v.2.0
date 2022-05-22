@@ -1,5 +1,5 @@
 import {Component, ContentChild, OnInit} from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {MatInput} from "@angular/material/input";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   registrationUrl = 'http://localhost:3000/registratedUsers'
   constructor(
     public dialogRef: MatDialogRef<any>,
+       public notification: MatDialog,
        private router:Router,
        private formBuilder:FormBuilder,
        private httpClient:HttpClient
@@ -38,9 +39,14 @@ export class LoginComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  SuccesNotification():void{
+    const success = this.notification.open()
+  }
+
   Registration(): void{
     this.httpClient.post<IUser>(this.registrationUrl, this.registrationForm.value).subscribe(response =>{
-      alert('Registration Successfully your account created');
+      this.dialogRef.close();
+
       this.registrationForm.reset();
       this.router.navigate(['profile/:id'])
     })
