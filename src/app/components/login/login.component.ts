@@ -5,6 +5,7 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {IUser} from "../../interfaces/IUser";
+import {SuccessComponent} from "./notification/success/success.component";
 
 @Component({
   selector: 'app-login',
@@ -40,7 +41,9 @@ export class LoginComponent implements OnInit {
   }
 
   SuccesNotification():void{
-    const success = this.notification.open()
+    const success = this.notification.open(SuccessComponent,{
+      width:'25%'
+    })
   }
 
   Registration(): void{
