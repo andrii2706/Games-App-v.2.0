@@ -26,6 +26,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/login/registration/registration.component';
 import { ShowHidePasswordComponent } from './components/login/registration/show-hide-password/show-hide-password.component';
+import {SuccessComponent} from "./components/login/notification/success/success.component";
+import {ErrorComponent} from "./components/login/notification/error/error.component";
 
 const routes: Routes = [
   {
@@ -64,6 +66,8 @@ const routes: Routes = [
         PipePipe,
         UserAccountComponent,
         LoginComponent,
+        SuccessComponent,
+        ErrorComponent,
         RegistrationComponent,
         ShowHidePasswordComponent,
     ],
