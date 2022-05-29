@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {SearchDialogWindowComponent} from "../search-dialog-window/search-dialog-window.component";
 import {LoginComponent} from "../login/login.component";
+import {AuthComponent} from "../login/auth/auth.component";
 
 @Component({
   selector: 'app-wrap',
@@ -26,7 +27,7 @@ export class WrapComponent implements OnInit {
     });
   }
   openLoginModal(){
-    const loginRef = this.dialog.open(LoginComponent,{
+    const loginRef = this.dialog.open(AuthComponent,{
       width: '75%',
       height: 'auto',
       panelClass: 'mat-dialog-container-custome'

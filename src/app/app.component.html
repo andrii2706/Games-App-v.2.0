@@ -1,6 +1,6 @@
 <div class="main-block">
   <app-wrap></app-wrap>
-  <div class="button-top">
+  <div class="button-top" [ngClass]="topScrollBtn">
     <button (click)="scrollToTop()"><mat-icon>keyboard_arrow_up</mat-icon></button>
   </div>
   <app-footer></app-footer>

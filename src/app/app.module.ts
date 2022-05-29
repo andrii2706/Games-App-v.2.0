@@ -28,6 +28,7 @@ import { RegistrationComponent } from './components/login/registration/registrat
 import { ShowHidePasswordComponent } from './components/login/registration/show-hide-password/show-hide-password.component';
 import {SuccessComponent} from "./components/login/notification/success/success.component";
 import {ErrorComponent} from "./components/login/notification/error/error.component";
+import { AuthComponent } from './components/login/auth/auth.component';
 
 const routes: Routes = [
   {
@@ -47,7 +48,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/cosonsoles/cosonsoles.module').then(m=>m.CosonsolesModule)
   },
   {
-    path: 'profile/:id',
+    path: 'profile',
     component:UserAccountComponent
   }
 
@@ -70,6 +71,7 @@ const routes: Routes = [
         ErrorComponent,
         RegistrationComponent,
         ShowHidePasswordComponent,
+        AuthComponent,
     ],
   imports: [
     BrowserModule,

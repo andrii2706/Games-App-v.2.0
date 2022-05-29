@@ -27,49 +27,13 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.registrationForm =
-      new FormGroup({
-        name: new FormControl(''),
-        surname: new FormControl(''),
-        email: new FormControl(''),
-        phone: new FormControl(''),
-        password: new FormControl(''),
 
-      })
   }
 
   oNClick(): void {
     this.dialogRef.close();
   }
 
-  SuccessNotification(): void {
-    const success = this.notification.open(SuccessComponent, {
-      width: '25%'
-    });
-    setTimeout(()=>{
-    success.close()
-    },1000)
-  }
 
-  ErrorNotification(): void {
-    let error = this.notification.open(ErrorComponent, {
-      width: '25%',
-    });
-    setTimeout(() => {
-      error.close();
-      }, 1000)
-  }
-
-  Registration(): void {
-    this.httpClient.post<IUser>(environment.registerURL, this.registrationForm.value).subscribe(res => {
-      this.dialogRef.close();
-      this.registrationForm.reset();
-      this.SuccessNotification();
-      this.router.navigate(['profile/:id'])
-    }, error => {
-      this.dialogRef.close();
-      this.ErrorNotification();
-    })
-  }
 }
 
