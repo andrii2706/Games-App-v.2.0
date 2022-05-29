@@ -1,4 +1,4 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ViewportScroller} from "@angular/common";
 
 @Component({
@@ -7,15 +7,17 @@ import {ViewportScroller} from "@angular/common";
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent{
   @HostListener('window:scroll', ['$event']) onScroll(event: any) {
     let pageYoffset = window.pageYOffset;
     if (pageYOffset >= 100) {
       this.topScrollBtn = 'btn-show'
-    }else {
+    }else if (pageYoffset <= 100) {
       this.topScrollBtn= 'btn-hide'
     }
   }
+
+
   topScrollBtn: string
   constructor(private scroll: ViewportScroller) {
   }
@@ -24,4 +26,6 @@ export class AppComponent {
     const top = this.scroll.scrollToPosition([0, 0]);
 
   }
+
+
 }
