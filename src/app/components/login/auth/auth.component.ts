@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoginComponent} from "../login.component";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {RegistrationComponent} from "../registration/registration.component";
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog,
+    public dialogRef: MatDialogRef<any>,
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
+  openLoginModal(): void {
+    const loginRef = () => {
+      this.dialog.open(LoginComponent, {
+        width: '75%', height: 'auto'
+      })
+    }
+  }
+
+  openRegistrationModal(): void {
+    const registrationRef = () => {
+      this.dialog.open(RegistrationComponent, {
+        width: '75%', height: 'auto'
+      })
+    }
+  }
+
+  onCloseModal():void {
+    this.dialogRef.close()
+  }
 }

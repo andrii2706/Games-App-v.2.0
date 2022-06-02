@@ -1,10 +1,18 @@
-<section>
-  <h2>
-    Hello You can Login On my Web Site.
-  </h2>
-  <span>If you had registered you can login.</span>
-  <div>
-    <button>Login</button>
-    <button>Registration</button>
+<section >
+  <div class="auth-header">
+    <button (click)="onCloseModal()">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
+  <div class="auth">
+    <h2 class="auth-title">
+      Hello You can Login On my Web Site.
+    </h2>
+    <span class="auth-description">If you had registered you can login.</span>
+    <div class="auth-buttons">
+      <button class="auth-btn" (click)="openLoginModal()">Login</button>
+      <button class="auth-btn" (click)="openRegistrationModal()">Registration</button>
+    </div>
+  </div>
+  <div class="auth-footer"></div>
 </section>
