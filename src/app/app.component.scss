@@ -34,6 +34,9 @@
     }
   }
 }
+.hide{
+  opacity: 0;
+}
 .btn-hide{
   opacity: 0;
   animation: hide 1000ms ease-in-out;
