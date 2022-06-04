@@ -27,12 +27,18 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit():void {
-
+ new FormGroup({
+   email: new FormControl(''),
+   password: new FormControl('')
+ })
   }
 
 
   closeDialog():void {
     this.dialogRef.close();
+  }
+  Login(): void{
+
   }
 }
 
