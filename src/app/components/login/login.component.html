@@ -4,10 +4,10 @@
       <mat-icon>close</mat-icon>
     </button>
   </div>
-  <div>
-    <form>
+  <div class="padding-for-form">
+    <form class="login-form" [formGroup]="loginForm">
       <mat-form-field>
-        <mat-label>Email</mat-label>
+        <mat-label>Email</mat-label>>
         <input formControlName="email" autocomplete="false" matInput type="text" placeholder="Ex. pat@example.com">
         <!--        <mat-hint>Errors appear instantly!</mat-hint>-->
         <!--        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
@@ -32,4 +32,5 @@
       </app-show-hide-password>
     </form>
   </div>
+  <div class="dialog-footer"></div>
 </div>

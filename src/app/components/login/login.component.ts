@@ -15,7 +15,7 @@ import {environment} from "../../../environments/environment";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public registrationForm!: FormGroup;
+  public loginForm!: FormGroup;
 
   constructor(
     public dialogRef: MatDialogRef<any>,
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit():void {
- new FormGroup({
+ this.loginForm = new FormGroup({
    email: new FormControl(''),
    password: new FormControl('')
  })
