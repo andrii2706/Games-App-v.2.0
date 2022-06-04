@@ -26,14 +26,13 @@ export class LoginComponent implements OnInit {
   ) {
   }
 
-  ngOnInit(): void {
+  ngOnInit():void {
 
   }
 
-  oNClick(): void {
+
+  closeDialog():void {
     this.dialogRef.close();
   }
-
-
 }
 

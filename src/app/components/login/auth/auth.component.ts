@@ -23,16 +23,18 @@ export class AuthComponent implements OnInit {
     const loginRef = () => {
       this.dialog.open(LoginComponent, {
         width: '75%', height: 'auto'
-      })
+      });
     }
+    loginRef();
   }
 
   openRegistrationModal(): void {
-    const registrationRef = () => {
+    const registrationRef = () =>{
       this.dialog.open(RegistrationComponent, {
         width: '75%', height: 'auto'
-      })
+      });
     }
+    registrationRef();
   }
 
   onCloseModal():void {
