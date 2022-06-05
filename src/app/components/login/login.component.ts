@@ -5,8 +5,6 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {IUser} from "../../interfaces/IUser";
-import {SuccessComponent} from "./notification/success/success.component";
-import {ErrorComponent} from "./notification/error/error.component";
 import {environment} from "../../../environments/environment";
 
 @Component({
@@ -19,7 +17,6 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<any>,
-    public notification: MatDialog,
     private router: Router,
     private formBuilder: FormBuilder,
     private httpClient: HttpClient
@@ -38,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.dialogRef.close();
   }
   Login(): void{
-     this.httpClient.get<any>(this.)
+     this.httpClient.get<any>(environment.registerURL)
   }
 }
 
