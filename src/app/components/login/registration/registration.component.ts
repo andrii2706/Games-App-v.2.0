@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from "@angular/forms";
-import {HttpClient} from "@angular/common/http";
-import {IUser} from "../../../interfaces/IUser";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {SuccessComponent} from "../notification/success/success.component";
 import {ErrorComponent} from "../notification/error/error.component";
 import {environment} from "../../../../environments/environment";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
-import {ErrorStateMatcher} from "@angular/material/core";
 import MyErrorStateMatcher from "../../../dirictive/myErrorStateMatcher";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-registration',
@@ -25,8 +23,8 @@ export class RegistrationComponent implements OnInit {
     public dialogRef: MatDialogRef<any>,
     public notification: MatDialog,
     private router: Router,
-    private formBuilder: FormBuilder,
-    private httpClient: HttpClient
+    public authService:AuthService
+
   ) {
   }
   matcher = new MyErrorStateMatcher();
@@ -46,7 +44,7 @@ export class RegistrationComponent implements OnInit {
   }
   SuccessNotification(): void {
     const success = this.notification.open(SuccessComponent, {
-      width: '25%'
+      width: '50%'
     });
     setTimeout(()=>{
       success.close()
@@ -55,7 +53,7 @@ export class RegistrationComponent implements OnInit {
 
   ErrorNotification(): void {
     let error = this.notification.open(ErrorComponent, {
-      width: '25%',
+      width: '50%',
     });
     setTimeout(() => {
       error.close();
@@ -63,7 +61,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   Registration(): void {
-    this.httpClient.post<IUser>(environment.registerURL, this.registrationForm.value).subscribe(res => {
+    this.authService.Registration(this.registrationForm.value).subscribe(res => {
       this.dialogRef.close();
       this.registrationForm.reset();
       this.SuccessNotification();
