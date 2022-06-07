@@ -3,7 +3,6 @@ import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {SuccessComponent} from "../notification/success/success.component";
 import {ErrorComponent} from "../notification/error/error.component";
-import {environment} from "../../../../environments/environment";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import MyErrorStateMatcher from "../../../dirictive/myErrorStateMatcher";
 import {AuthService} from "../../../services/auth.service";

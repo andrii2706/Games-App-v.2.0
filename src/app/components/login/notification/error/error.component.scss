@@ -1,0 +1,14 @@
+.error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: beige;
+  background: #1D1D1E !important;
+  padding: 50px;
+  h1{
+    font-size: 25px;
+  }
+  ::ng-deep mat-icon{
+    color: red;
+  }
+}

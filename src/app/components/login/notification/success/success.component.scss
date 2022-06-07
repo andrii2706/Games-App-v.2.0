@@ -2,9 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  h1{}
-  mat-icon{
+  background: #1D1D1E !important;
+  color: beige;
+  padding: 50px;
+  h1{
+    font-size: 25px;
+  }
+ ::ng-deep mat-icon{
     color: #089b08;
   }
 }

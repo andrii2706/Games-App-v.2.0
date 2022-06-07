@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {ErrorComponent} from "./notification/error/error.component";
 import {AuthService} from "../../services/auth.service";
@@ -23,23 +23,27 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl('')
+      email: new FormControl('',[Validators.required, Validators.email]),
+      password: new FormControl('',[Validators.required, Validators.minLength(8)])
     })
   }
 
   errorNotification(): void {
     const error = this.notification.open(ErrorComponent, {
       width: '50%'
-    })
+    });
+    setTimeout(() => {
+      error.close();
+    }, 1000)
   }
 
   closeDialog(): void {
-    this.dialogRef.close();
+    this.dialogRef.close()
   }
 
   Login(): void {
     this.authService.SingIn(this.loginForm.value).subscribe(res => {
+      debugger
       this.dialogRef.close();
       this.loginForm.reset();
       this.router.navigate(['profile'])

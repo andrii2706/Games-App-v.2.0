@@ -1,11 +1,11 @@
-<div class="login-modal">
+<div class="register-modal">
   <div class="dialog-header">
     <button (click)="oNClick()">
       <mat-icon>close</mat-icon>
     </button>
   </div>
   <div class="padding-for-form">
-    <form class="login-form" [formGroup]="registrationForm" (ngSubmit)="Registration()">
+    <form class="register-form" [formGroup]="registrationForm" (ngSubmit)="Registration()">
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input formControlName="name"

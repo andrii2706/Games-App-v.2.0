@@ -29,7 +29,7 @@ export class AuthComponent implements OnInit {
   }
 
   openRegistrationModal(): void {
-    const registrationRef = () =>{
+    const registrationRef = () => {
       this.dialog.open(RegistrationComponent, {
         width: '75%', height: 'auto'
       });
@@ -37,7 +37,7 @@ export class AuthComponent implements OnInit {
     registrationRef();
   }
 
-  onCloseModal():void {
+  onCloseModal(): void {
     this.dialogRef.close()
   }
 }
