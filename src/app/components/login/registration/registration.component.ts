@@ -6,6 +6,7 @@ import {ErrorComponent} from "../notification/error/error.component";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import MyErrorStateMatcher from "../../../dirictive/myErrorStateMatcher";
 import {AuthService} from "../../../services/auth.service";
+import {IUser} from "../../../interfaces/IUser";
 
 @Component({
   selector: 'app-registration',
@@ -17,7 +18,7 @@ import {AuthService} from "../../../services/auth.service";
 
 export class RegistrationComponent implements OnInit {
   public registrationForm!: FormGroup;
-
+  token: false
   constructor(
     public dialogRef: MatDialogRef<any>,
     public notification: MatDialog,
@@ -35,8 +36,8 @@ export class RegistrationComponent implements OnInit {
         email: new FormControl('',[Validators.required, Validators.email]),
         phone: new FormControl('',[Validators.required]),
         password: new FormControl('',[Validators.required, Validators.minLength(8)]),
+        token : new FormControl(true)
       });
-
   }
   oNClick():void{
     this.dialogRef.close()
@@ -64,6 +65,9 @@ export class RegistrationComponent implements OnInit {
       this.dialogRef.close();
       this.registrationForm.reset();
       this.SuccessNotification();
+      if(this.token){
+        console.log('111');
+      }
       this.router.navigate(['profile'])
     }, error => {
       this.dialogRef.close();

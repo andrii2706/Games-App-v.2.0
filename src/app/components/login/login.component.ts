@@ -12,7 +12,7 @@ import {AuthService} from "../../services/auth.service";
 })
 export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
-
+  private userIsLogin: boolean;
   constructor(
     public dialogRef: MatDialogRef<any>,
     private router: Router,
@@ -43,10 +43,9 @@ export class LoginComponent implements OnInit {
 
   Login(): void {
     this.authService.SingIn(this.loginForm.value).subscribe(res => {
-      debugger
       this.dialogRef.close();
       this.loginForm.reset();
-      this.router.navigate(['profile'])
+        this.router.navigate(['profile'])
     }, error => {
       this.dialogRef.close();
       this.errorNotification();
