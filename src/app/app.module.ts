@@ -28,6 +28,8 @@ import { ShowHidePasswordComponent } from './components/login/registration/show-
 import {SuccessComponent} from "./components/login/notification/success/success.component";
 import {ErrorComponent} from "./components/login/notification/error/error.component";
 import { AuthComponent } from './components/login/auth/auth.component';
+import {AuthGuard} from "./guards/auth.guard";
+import {LogutGuard} from "./guards/logut.guard";
 
 const routes: Routes = [
   {
@@ -48,7 +50,10 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component:UserAccountComponent
+    component:UserAccountComponent,
+    canActivate:[AuthGuard],
+    canDeactivate:[LogutGuard],
+    redirectTo: '/games'
   }
 
 ]

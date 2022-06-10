@@ -1,8 +1,8 @@
 <div class="user-profiler">
   <div class="user">
     <div class="buttons">
-      <button>Back to games</button>
-      <button>Add game</button>
+      <button>Logout</button>
+      <button (click)="backToGames()">Back to games</button>
     </div>
     <div class="user-header">
       <h1>Hello User(user.username || user.name)
@@ -38,3 +38,4 @@
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
