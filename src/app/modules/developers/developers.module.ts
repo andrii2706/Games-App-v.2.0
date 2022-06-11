@@ -8,6 +8,8 @@ import {DeveloperDetailsComponent} from "../../components/developers/developer/d
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {NgxPaginationModule} from "ngx-pagination";
 import {MatIconModule} from "@angular/material/icon";
+import {AppModule} from "../../app.module";
+import {LoaderModule} from "../loader/loader.module";
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import {MatIconModule} from "@angular/material/icon";
     DeveloperComponent,
     DeveloperDetailsComponent
   ],
-    imports: [
-        CommonModule,
-        DevelopersRoutingModule,
-        MatProgressSpinnerModule,
-        NgxPaginationModule,
-        MatIconModule
-    ]
+  imports: [
+    CommonModule,
+    DevelopersRoutingModule,
+    MatProgressSpinnerModule,
+    NgxPaginationModule,
+    MatIconModule,
+    AppModule,
+    LoaderModule
+  ]
 })
 export class DevelopersModule { }

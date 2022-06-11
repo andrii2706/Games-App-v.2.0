@@ -13,6 +13,8 @@ import {AuthService} from "../../services/auth.service";
 export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
   private userIsLogin: boolean;
+  loading = false;
+
   constructor(
     public dialogRef: MatDialogRef<any>,
     private router: Router,
@@ -23,8 +25,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl('',[Validators.required, Validators.email]),
-      password: new FormControl('',[Validators.required, Validators.minLength(8)])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)])
     })
   }
 
@@ -42,10 +44,11 @@ export class LoginComponent implements OnInit {
   }
 
   Login(): void {
+    this.loading = true;
     this.authService.SingIn(this.loginForm.value).subscribe(res => {
       this.dialogRef.close();
       this.loginForm.reset();
-        this.router.navigate(['profile'])
+      this.router.navigate(['profile'])
     }, error => {
       this.dialogRef.close();
       this.errorNotification();

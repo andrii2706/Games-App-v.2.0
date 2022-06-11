@@ -33,7 +33,5 @@ export class UserAccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  backToGames(): void{
-    this.router.navigate(['/games'])
-  }
+
 }

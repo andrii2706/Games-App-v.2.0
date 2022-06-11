@@ -15,6 +15,9 @@ import {WindowsComponent} from "../../components/icons/windows/windows.component
 import {MatIconModule} from "@angular/material/icon";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatDividerModule} from "@angular/material/divider";
+import {AppModule} from "../../app.module";
+import {LoaderComponent} from "../../components/loader/loader.component";
+import {LoaderModule} from "../loader/loader.module";
 @NgModule({
   declarations: [
     GamesComponent,
@@ -24,20 +27,23 @@ import {MatDividerModule} from "@angular/material/divider";
     PlayStationComponent,
     WindowsComponent,
   ],
-    imports: [
-        GamesroutesModule,
-        HttpClientModule,
-        CommonModule,
-        NgxPaginationModule,
-        MatProgressSpinnerModule,
-        NgbModule,
-        MatCardModule,
-        MatIconModule,
-        MatTabsModule,
-        MatDividerModule,
-    ],
+  imports: [
+    GamesroutesModule,
+    HttpClientModule,
+    CommonModule,
+    NgxPaginationModule,
+    MatProgressSpinnerModule,
+    NgbModule,
+    MatCardModule,
+    MatIconModule,
+    MatTabsModule,
+    MatDividerModule,
+    LoaderModule,
+  ],
 
-  exports: [],
+  exports: [
+
+  ],
 
 })
 export class GamesModule {

@@ -30,6 +30,9 @@ import {ErrorComponent} from "./components/login/notification/error/error.compon
 import { AuthComponent } from './components/login/auth/auth.component';
 import {AuthGuard} from "./guards/auth.guard";
 import {LogutGuard} from "./guards/logut.guard";
+import {LoaderComponent} from "./components/loader/loader.component";
+import {MatProgressSpinnerModule, MatSpinner} from "@angular/material/progress-spinner";
+import {LoaderModule} from "./modules/loader/loader.module";
 
 const routes: Routes = [
   {
@@ -53,7 +56,6 @@ const routes: Routes = [
     component:UserAccountComponent,
     canActivate:[AuthGuard],
     canDeactivate:[LogutGuard],
-    redirectTo: '/games'
   }
 
 ]
@@ -92,8 +94,10 @@ const routes: Routes = [
     MatTableModule,
     ReactiveFormsModule,
     FormsModule,
-
+    MatProgressSpinnerModule,
+    LoaderModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

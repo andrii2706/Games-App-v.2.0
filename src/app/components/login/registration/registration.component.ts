@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {SuccessComponent} from "../notification/success/success.component";
@@ -15,40 +15,43 @@ import {IUser} from "../../../interfaces/IUser";
 })
 
 
-
 export class RegistrationComponent implements OnInit {
   public registrationForm!: FormGroup;
-  token: false
+  loading = false;
+
   constructor(
     public dialogRef: MatDialogRef<any>,
     public notification: MatDialog,
     private router: Router,
-    public authService:AuthService
-
+    public authService: AuthService
   ) {
   }
+
   matcher = new MyErrorStateMatcher();
+
   ngOnInit(): void {
     this.registrationForm =
       new FormGroup({
-        name: new FormControl('',[Validators.required]),
-        surname: new FormControl('',[Validators.required]),
-        email: new FormControl('',[Validators.required, Validators.email]),
-        phone: new FormControl('',[Validators.required]),
-        password: new FormControl('',[Validators.required, Validators.minLength(8)]),
-        token : new FormControl(true)
+        name: new FormControl('', [Validators.required]),
+        surname: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        phone: new FormControl('', [Validators.required]),
+        password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+        token: new FormControl(true)
       });
   }
-  oNClick():void{
+
+  oNClick(): void {
     this.dialogRef.close()
   }
+
   SuccessNotification(): void {
     const success = this.notification.open(SuccessComponent, {
       width: '50%'
     });
-    setTimeout(()=>{
+    setTimeout(() => {
       success.close()
-    },1000)
+    }, 1000)
   }
 
   ErrorNotification(): void {
@@ -61,13 +64,11 @@ export class RegistrationComponent implements OnInit {
   }
 
   Registration(): void {
+    this.loading = true;
     this.authService.Registration(this.registrationForm.value).subscribe(res => {
       this.dialogRef.close();
       this.registrationForm.reset();
       this.SuccessNotification();
-      if(this.token){
-        console.log('111');
-      }
       this.router.navigate(['profile'])
     }, error => {
       this.dialogRef.close();

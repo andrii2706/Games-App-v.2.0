@@ -1,6 +1,4 @@
-<div *ngIf="!developers" class="spinner">
-  <mat-spinner></mat-spinner>
-</div>
+<app-loader *ngIf="!developers"></app-loader>
 <div class="developers-list">
 <div *ngIf="totalDevelopers">
     <app-developer *ngFor="let developer of developers | paginate:
