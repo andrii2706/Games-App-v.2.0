@@ -8,7 +8,6 @@ import {DeveloperDetailsComponent} from "../../components/developers/developer/d
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {NgxPaginationModule} from "ngx-pagination";
 import {MatIconModule} from "@angular/material/icon";
-import {AppModule} from "../../app.module";
 import {LoaderModule} from "../loader/loader.module";
 
 
@@ -24,7 +23,6 @@ import {LoaderModule} from "../loader/loader.module";
     MatProgressSpinnerModule,
     NgxPaginationModule,
     MatIconModule,
-    AppModule,
     LoaderModule
   ]
 })

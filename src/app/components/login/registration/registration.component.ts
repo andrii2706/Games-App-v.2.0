@@ -18,7 +18,7 @@ import {IUser} from "../../../interfaces/IUser";
 export class RegistrationComponent implements OnInit {
   public registrationForm!: FormGroup;
   loading = false;
-
+  token = false;
   constructor(
     public dialogRef: MatDialogRef<any>,
     public notification: MatDialog,
@@ -69,6 +69,7 @@ export class RegistrationComponent implements OnInit {
       this.dialogRef.close();
       this.registrationForm.reset();
       this.SuccessNotification();
+
       this.router.navigate(['profile'])
     }, error => {
       this.dialogRef.close();

@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) {
   }
-  Registration(formValue:any):Observable<IUser>{
+  Registration(formValue:IUser):Observable<IUser>{
   return this.httpClient.post<IUser>(environment.registerURL, formValue)
   }
   SingIn(formValue:any):Observable<any>{
