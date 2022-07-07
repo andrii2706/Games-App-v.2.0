@@ -15,7 +15,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatDividerModule} from "@angular/material/divider";
-import {SearchDialogWindowComponent} from "./components/search-dialog-window/search-dialog-window.component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatDialogModule} from "@angular/material/dialog";
@@ -65,7 +64,6 @@ const routes: Routes = [
         AppComponent,
         WrapComponent,
         HomeComponent,
-        SearchDialogWindowComponent,
         FooterComponent,
         LinkedinIconComponent,
         GitIconComponent,

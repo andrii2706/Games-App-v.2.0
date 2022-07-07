@@ -1,6 +1,28 @@
+::ng-deep.mat-drawer-inner-container {
+  width: 500px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1627855437292-7efeee237b12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdhbWVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80") !important;
+  border: 0;
+
+}
 .all-games{
+
+  .sideBar-btn{
+    margin:0 25px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color_card);
+    color: var(--text-color);
+    padding: 20px;
+  }
   .games {
     height: auto;
+    padding-top:25px ;
     background-image: url("https://images.unsplash.com/photo-1627855437292-7efeee237b12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdhbWVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80") !important;
     background-size: cover;
     background-position: center;

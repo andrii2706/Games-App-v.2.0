@@ -1,12 +1,28 @@
-<div id="all-games" class="all-games">
-  <app-loader *ngIf="!games"></app-loader>
-  <div id="Games" class="games" *ngIf="games">
-    <div *ngIf="items" class="games-list">
-      <app-game *ngFor="let game of games | paginate :{ itemsPerPage: 25, currentPage: page, totalItems:items.count}"
-                [game]="game"></app-game>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav  mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>23323</li>
+      <li>23323</li>
+      <li>23323</li>
+      <li>23323</li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div id="all-games" class="all-games">
+      <app-loader *ngIf="!games"></app-loader>
+      <div id="Games" class="games" *ngIf="games">
+        <button class="sideBar-btn" mat-button (click)="sidenav.toggle()"><mat-icon>filter_list</mat-icon></button>
+        <div *ngIf="items" class="games-list">
+          <app-game *ngFor="let game of games | paginate :{ itemsPerPage: 25, currentPage: page, totalItems:items.count}"
+                    [game]="game"></app-game>
+        </div>
+        <div class="pagination-controllers">
+          <pagination-controls class="pagination" (pageChange)="navigateTo($event)"></pagination-controls>
+        </div>
+      </div>
     </div>
-    <div class="pagination-controllers">
-      <pagination-controls class="pagination" (pageChange)="navigateTo($event)"></pagination-controls>
-    </div>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

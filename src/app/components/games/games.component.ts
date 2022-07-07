@@ -12,6 +12,9 @@ export class GamesComponent implements OnInit {
   games: IGame[]
   page:number
   items: IGames
+  events: string[] = [];
+  opened: boolean;
+
   constructor(
     private gamesService:GamesService
   ) { }

@@ -18,6 +18,8 @@ import {MatDividerModule} from "@angular/material/divider";
 import {AppModule} from "../../app.module";
 import {LoaderComponent} from "../../components/loader/loader.component";
 import {LoaderModule} from "../loader/loader.module";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatButtonModule} from "@angular/material/button";
 @NgModule({
   declarations: [
     GamesComponent,
@@ -39,6 +41,8 @@ import {LoaderModule} from "../loader/loader.module";
     MatTabsModule,
     MatDividerModule,
     LoaderModule,
+    MatSidenavModule,
+    MatButtonModule,
   ],
 
   exports: [

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {SearchDialogWindowComponent} from "../search-dialog-window/search-dialog-window.component";
 import {AuthComponent} from "../login/auth/auth.component";
 
 @Component({
@@ -16,12 +15,6 @@ export class WrapComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openSearchWindow() {
-    const dialogRef = this.dialog.open(SearchDialogWindowComponent, {
-      width: '75%',
-      panelClass: 'mat-dialog-container-custome'
-    });
-  }
 
   openAuthModal() {
     const authRef = this.dialog.open(AuthComponent, {
