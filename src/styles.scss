@@ -18,15 +18,24 @@ html, body {
   font-family:'Smooch Sans', sans-serif !important;
   scroll-behavior: smooth;
 }
-
 body {
   user-select: none;
   margin: 0;
-  background: rgb(13, 13, 22, 0.63)!important;
+  background: var(--bg-color);
+  h1 , h2, h3, h4 ,h5 , h6, span, div, p{
+    color: var(--text-color);
+  }
   letter-spacing: 1px;
 }
-app-games{
+body{
+  --text-color:beige;
+  --bg-color:rgb(13, 13, 22, 0.63)!important
 }
+body.white-theme{
+  --text-color:  rgb(13, 13, 22, 0.63);
+  --bg-color: white !important;
+}
+
 app-games div {
   height: auto;
 }

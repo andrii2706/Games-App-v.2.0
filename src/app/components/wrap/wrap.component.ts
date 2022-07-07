@@ -9,8 +9,7 @@ import {AuthComponent} from "../login/auth/auth.component";
   styleUrls: ['./wrap.component.scss']
 })
 export class WrapComponent implements OnInit {
-
-
+  iconChange: boolean;
   constructor(public dialog: MatDialog) {
   }
 
@@ -30,5 +29,9 @@ export class WrapComponent implements OnInit {
       height: 'auto',
       panelClass: 'mat-dialog-container-custome'
     })
+  }
+
+  themeToggle() :void {
+    document.body.classList.toggle('white-theme');
   }
 }
