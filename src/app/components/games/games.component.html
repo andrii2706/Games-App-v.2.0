@@ -1,3 +1,13 @@
+
+<div *ngIf="showFormInTemplate">
+  <form [formGroup]="searchInput" (ngSubmit)="searchOnGames()">
+        <mat-form-field>
+          <mat-label>What you want to find</mat-label>
+          <input matInput type="text" formControlName="query">
+        </mat-form-field>
+        <button class="search" ><mat-icon>search</mat-icon></button>
+      </form>
+</div>
 <mat-sidenav-container>
   <mat-sidenav #sidenav  mode="side" [(opened)]="opened" (opened)="events.push('open!')"
                (closed)="events.push('close!')">
@@ -14,7 +24,10 @@
     <div id="all-games" class="all-games">
       <app-loader *ngIf="!games"></app-loader>
       <div id="Games" class="games" *ngIf="games">
-        <button class="sideBar-btn" mat-button (click)="sidenav.toggle()"><mat-icon>filter_list</mat-icon></button>
+        <div class="buttons-top">
+          <button class="sideBar-btn" mat-button (click)="sidenav.toggle()"><mat-icon>filter_list</mat-icon></button>
+          <button class="sideBar-btn" mat-button (click)="showForm()"><mat-icon>search</mat-icon></button>
+        </div>
         <div *ngIf="items" class="games-list">
           <app-game *ngFor="let game of games | paginate :{ itemsPerPage: 25, currentPage: page, totalItems:items.count}"
                     [game]="game"></app-game>

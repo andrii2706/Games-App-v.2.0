@@ -15,11 +15,12 @@ import {WindowsComponent} from "../../components/icons/windows/windows.component
 import {MatIconModule} from "@angular/material/icon";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatDividerModule} from "@angular/material/divider";
-import {AppModule} from "../../app.module";
-import {LoaderComponent} from "../../components/loader/loader.component";
 import {LoaderModule} from "../loader/loader.module";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 @NgModule({
   declarations: [
     GamesComponent,
@@ -43,6 +44,10 @@ import {MatButtonModule} from "@angular/material/button";
     LoaderModule,
     MatSidenavModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 
   exports: [

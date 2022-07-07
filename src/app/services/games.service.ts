@@ -24,13 +24,13 @@ export class GamesService {
     return this.httpClient.get<IGames>(this.basicUrl);
   }
 
-  getGames(NewPage: number, filter = {}): Observable<IGames> {
-    return this.httpClient.get<IGames>(this.url, {
+  getGames(NewPage: number, query: string): Observable<IGames> {
+    return this.httpClient.get<IGames>(this.url , {
       params: new HttpParams({
         fromObject: {
           key: this.key,
           page: NewPage,
-          ...filter
+          query: query,
         }
       })
     })

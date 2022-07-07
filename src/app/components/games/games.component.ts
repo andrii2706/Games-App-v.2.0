@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IGame, IGames} from "../../interfaces/Igames";
 import {GamesService} from "../../services/games.service";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-games',
@@ -8,29 +9,46 @@ import {GamesService} from "../../services/games.service";
   styleUrls: ['./games.component.scss']
 })
 export class GamesComponent implements OnInit {
-
+  public searchInput: FormGroup
   games: IGame[]
-  page:number
+  page: number
   items: IGames
   events: string[] = [];
   opened: boolean;
+  showFormInTemplate = false;
 
   constructor(
-    private gamesService:GamesService
-  ) { }
+    private gamesService: GamesService,
+     ) {}
 
   ngOnInit(): void {
-    this.getPaginationandGames(1);
+    this.searchInput =  new FormGroup({
+      query : new FormControl('')
+    })
+    this.getPaginationandGames(1, this.searchInput.value.query);
     this.getTotalItem();
   }
-  getPaginationandGames(Newpage:number){
-  this.gamesService.getGames(Newpage).subscribe(value => {this.games = value.results})
+
+  getPaginationandGames(Newpage: number, query: string) {
+    this.gamesService.getGames(Newpage, query).subscribe(value => {
+      this.games = value.results
+    })
+    console.log(query)
   }
-  navigateTo(Newpage: number){
+  showForm(): void{
+    this.showFormInTemplate = !this.showFormInTemplate;
+  }
+  navigateTo(Newpage: number) {
     this.page = Newpage,
-      this.getPaginationandGames(Newpage)
+      this.getPaginationandGames(Newpage, '')
   }
-  getTotalItem():void{
+
+   searchOnGames() {
+    this.showFormInTemplate = false;
+    this.getPaginationandGames(1, this.searchInput.value.query)
+  }
+
+  getTotalItem(): void {
     this.gamesService.getTotalItem().subscribe(value => this.items = value)
   }
 }
