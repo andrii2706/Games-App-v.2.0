@@ -55,7 +55,6 @@ const routes: Routes = [
     path: 'profile',
     component:UserAccountComponent,
     canActivate:[AuthGuard],
-    canDeactivate:[LogutGuard],
   }
 
 ]

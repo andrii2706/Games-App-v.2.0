@@ -29,11 +29,15 @@ body {
 }
 body{
   --text-color:beige;
-  --bg-color:rgb(13, 13, 22, 0.63)!important
+  --bg-color:rgb(13, 13, 22, 0.63)!important;
+  --bg-color_card: rgb(125, 123, 123, 0.80);
+  --bg-color_rate: #1D1D1E;
 }
 body.white-theme{
   --text-color: dimgrey;
   --bg-color: white !important;
+  --bg-color_card: #d2d1d1;
+  --bg-color_rate: #dadada;
 }
 
 app-games div {
