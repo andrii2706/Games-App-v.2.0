@@ -23,7 +23,7 @@ body {
   margin: 0;
   background: var(--bg-color);
   h1 , h2, h3, h4 ,h5 , h6, span, div, p{
-    color: var(--text-color);
+    color: var(--text-color) !important;
   }
   letter-spacing: 1px;
 }
@@ -32,7 +32,7 @@ body{
   --bg-color:rgb(13, 13, 22, 0.63)!important
 }
 body.white-theme{
-  --text-color:  rgb(13, 13, 22, 0.63);
+  --text-color: dimgrey;
   --bg-color: white !important;
 }
 
